@@ -19,7 +19,7 @@ interface WeatherData {
   }>;
 }
 
-// Заглушка данных о погоде для демонстрации
+// Расширенная база данных городов для демонстрации
 const mockWeatherData: Record<string, WeatherData> = {
   'Москва': {
     city: 'Москва',
@@ -65,13 +65,167 @@ const mockWeatherData: Record<string, WeatherData> = {
       { day: 'Чт', temperature: 18, condition: 'Ясно', icon: 'Sun' },
       { day: 'Пт', temperature: 17, condition: 'Облачно', icon: 'Cloud' }
     ]
+  },
+  'Екатеринбург': {
+    city: 'Екатеринбург',
+    temperature: 18,
+    condition: 'Ясно',
+    icon: 'Sun',
+    humidity: 60,
+    wind: 4,
+    forecast: [
+      { day: 'Пн', temperature: 19, condition: 'Ясно', icon: 'Sun' },
+      { day: 'Вт', temperature: 17, condition: 'Облачно', icon: 'Cloud' },
+      { day: 'Ср', temperature: 16, condition: 'Дождь', icon: 'CloudRain' },
+      { day: 'Чт', temperature: 15, condition: 'Дождь', icon: 'CloudRain' },
+      { day: 'Пт', temperature: 18, condition: 'Облачно', icon: 'Cloud' }
+    ]
+  },
+  'Казань': {
+    city: 'Казань',
+    temperature: 19,
+    condition: 'Облачно',
+    icon: 'Cloud',
+    humidity: 68,
+    wind: 5,
+    forecast: [
+      { day: 'Пн', temperature: 20, condition: 'Облачно', icon: 'Cloud' },
+      { day: 'Вт', temperature: 21, condition: 'Ясно', icon: 'Sun' },
+      { day: 'Ср', temperature: 22, condition: 'Ясно', icon: 'Sun' },
+      { day: 'Чт', temperature: 20, condition: 'Облачно', icon: 'Cloud' },
+      { day: 'Пт', temperature: 19, condition: 'Дождь', icon: 'CloudRain' }
+    ]
+  },
+  'Нижний Новгород': {
+    city: 'Нижний Новгород',
+    temperature: 20,
+    condition: 'Ясно',
+    icon: 'Sun',
+    humidity: 65,
+    wind: 4,
+    forecast: [
+      { day: 'Пн', temperature: 21, condition: 'Ясно', icon: 'Sun' },
+      { day: 'Вт', temperature: 20, condition: 'Облачно', icon: 'Cloud' },
+      { day: 'Ср', temperature: 19, condition: 'Дождь', icon: 'CloudRain' },
+      { day: 'Чт', temperature: 18, condition: 'Дождь', icon: 'CloudRain' },
+      { day: 'Пт', temperature: 20, condition: 'Облачно', icon: 'Cloud' }
+    ]
+  },
+  'Челябинск': {
+    city: 'Челябинск',
+    temperature: 17,
+    condition: 'Облачно',
+    icon: 'Cloud',
+    humidity: 70,
+    wind: 6,
+    forecast: [
+      { day: 'Пн', temperature: 18, condition: 'Облачно', icon: 'Cloud' },
+      { day: 'Вт', temperature: 16, condition: 'Дождь', icon: 'CloudRain' },
+      { day: 'Ср', temperature: 15, condition: 'Дождь', icon: 'CloudRain' },
+      { day: 'Чт', temperature: 17, condition: 'Облачно', icon: 'Cloud' },
+      { day: 'Пт', temperature: 19, condition: 'Ясно', icon: 'Sun' }
+    ]
+  },
+  'Самара': {
+    city: 'Самара',
+    temperature: 22,
+    condition: 'Ясно',
+    icon: 'Sun',
+    humidity: 55,
+    wind: 3,
+    forecast: [
+      { day: 'Пн', temperature: 23, condition: 'Ясно', icon: 'Sun' },
+      { day: 'Вт', temperature: 24, condition: 'Ясно', icon: 'Sun' },
+      { day: 'Ср', temperature: 22, condition: 'Облачно', icon: 'Cloud' },
+      { day: 'Чт', temperature: 20, condition: 'Облачно', icon: 'Cloud' },
+      { day: 'Пт', temperature: 21, condition: 'Ясно', icon: 'Sun' }
+    ]
+  },
+  'Омск': {
+    city: 'Омск',
+    temperature: 15,
+    condition: 'Дождь',
+    icon: 'CloudRain',
+    humidity: 80,
+    wind: 7,
+    forecast: [
+      { day: 'Пн', temperature: 14, condition: 'Дождь', icon: 'CloudRain' },
+      { day: 'Вт', temperature: 15, condition: 'Дождь', icon: 'CloudRain' },
+      { day: 'Ср', temperature: 16, condition: 'Облачно', icon: 'Cloud' },
+      { day: 'Чт', temperature: 18, condition: 'Облачно', icon: 'Cloud' },
+      { day: 'Пт', temperature: 17, condition: 'Облачно', icon: 'Cloud' }
+    ]
+  },
+  'Краснодар': {
+    city: 'Краснодар',
+    temperature: 26,
+    condition: 'Ясно',
+    icon: 'Sun',
+    humidity: 45,
+    wind: 3,
+    forecast: [
+      { day: 'Пн', temperature: 27, condition: 'Ясно', icon: 'Sun' },
+      { day: 'Вт', temperature: 28, condition: 'Ясно', icon: 'Sun' },
+      { day: 'Ср', temperature: 29, condition: 'Ясно', icon: 'Sun' },
+      { day: 'Чт', temperature: 27, condition: 'Облачно', icon: 'Cloud' },
+      { day: 'Пт', temperature: 25, condition: 'Гроза', icon: 'CloudLightning' }
+    ]
+  },
+  'Сочи': {
+    city: 'Сочи',
+    temperature: 28,
+    condition: 'Ясно',
+    icon: 'Sun',
+    humidity: 60,
+    wind: 2,
+    forecast: [
+      { day: 'Пн', temperature: 29, condition: 'Ясно', icon: 'Sun' },
+      { day: 'Вт', temperature: 28, condition: 'Ясно', icon: 'Sun' },
+      { day: 'Ср', temperature: 27, condition: 'Облачно', icon: 'Cloud' },
+      { day: 'Чт', temperature: 26, condition: 'Дождь', icon: 'CloudRain' },
+      { day: 'Пт', temperature: 27, condition: 'Облачно', icon: 'Cloud' }
+    ]
+  },
+  'Владивосток': {
+    city: 'Владивосток',
+    temperature: 18,
+    condition: 'Туман',
+    icon: 'Cloud',
+    humidity: 85,
+    wind: 8,
+    forecast: [
+      { day: 'Пн', temperature: 19, condition: 'Туман', icon: 'Cloud' },
+      { day: 'Вт', temperature: 20, condition: 'Облачно', icon: 'Cloud' },
+      { day: 'Ср', temperature: 21, condition: 'Ясно', icon: 'Sun' },
+      { day: 'Чт', temperature: 20, condition: 'Облачно', icon: 'Cloud' },
+      { day: 'Пт', temperature: 19, condition: 'Дождь', icon: 'CloudRain' }
+    ]
+  },
+  'Калининград': {
+    city: 'Калининград',
+    temperature: 19,
+    condition: 'Облачно',
+    icon: 'Cloud',
+    humidity: 75,
+    wind: 5,
+    forecast: [
+      { day: 'Пн', temperature: 18, condition: 'Дождь', icon: 'CloudRain' },
+      { day: 'Вт', temperature: 17, condition: 'Дождь', icon: 'CloudRain' },
+      { day: 'Ср', temperature: 18, condition: 'Облачно', icon: 'Cloud' },
+      { day: 'Чт', temperature: 19, condition: 'Облачно', icon: 'Cloud' },
+      { day: 'Пт', temperature: 20, condition: 'Ясно', icon: 'Sun' }
+    ]
   }
 };
+
+// Популярные города для быстрого доступа
+const popularCities = ['Москва', 'Санкт-Петербург', 'Сочи', 'Калининград', 'Екатеринбург'];
 
 const WeatherApp: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [weather, setWeather] = useState<WeatherData | null>(mockWeatherData['Москва']);
   const [error, setError] = useState('');
+  const [suggestions, setSuggestions] = useState<string[]>([]);
 
   const handleSearch = () => {
     if (!searchQuery.trim()) return;
@@ -79,12 +233,13 @@ const WeatherApp: React.FC = () => {
     // В реальном приложении здесь был бы API-запрос
     // Имитируем получение данных о погоде для выбранного города
     const cityKey = Object.keys(mockWeatherData).find(city => 
-      city.toLowerCase().includes(searchQuery.toLowerCase())
+      city.toLowerCase() === searchQuery.toLowerCase()
     );
 
     if (cityKey) {
       setWeather(mockWeatherData[cityKey]);
       setError('');
+      setSuggestions([]);
     } else {
       setError(`Город "${searchQuery}" не найден`);
     }
@@ -96,19 +251,72 @@ const WeatherApp: React.FC = () => {
     }
   };
 
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const query = e.target.value;
+    setSearchQuery(query);
+    
+    if (query.length > 1) {
+      // Поиск городов, содержащих запрос
+      const matchedCities = Object.keys(mockWeatherData).filter(city => 
+        city.toLowerCase().includes(query.toLowerCase())
+      ).slice(0, 5); // Ограничиваем 5 результатами
+      
+      setSuggestions(matchedCities);
+    } else {
+      setSuggestions([]);
+    }
+  };
+
+  const selectCity = (city: string) => {
+    setSearchQuery(city);
+    setWeather(mockWeatherData[city]);
+    setError('');
+    setSuggestions([]);
+  };
+
   return (
     <div className="h-full flex flex-col">
-      <div className="flex gap-2 mb-4">
-        <Input
-          placeholder="Введите город"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          onKeyDown={handleKeyDown}
-          className="flex-1"
-        />
-        <Button variant="outline" size="icon" onClick={handleSearch}>
-          <Icon name="Search" size={18} />
-        </Button>
+      <div className="relative">
+        <div className="flex gap-2 mb-2">
+          <Input
+            placeholder="Введите город"
+            value={searchQuery}
+            onChange={handleSearchChange}
+            onKeyDown={handleKeyDown}
+            className="flex-1"
+          />
+          <Button variant="outline" size="icon" onClick={handleSearch}>
+            <Icon name="Search" size={18} />
+          </Button>
+        </div>
+        
+        {suggestions.length > 0 && (
+          <div className="absolute z-10 w-full bg-white border rounded-md shadow-lg max-h-60 overflow-auto">
+            {suggestions.map((city) => (
+              <div 
+                key={city} 
+                className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                onClick={() => selectCity(city)}
+              >
+                {city}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div className="flex gap-2 mb-4 overflow-x-auto py-1">
+        {popularCities.map(city => (
+          <Button 
+            key={city} 
+            variant="outline" 
+            size="sm"
+            onClick={() => selectCity(city)}
+            className={weather?.city === city ? 'bg-blue-100' : ''}
+          >
+            {city}
+          </Button>
+        ))}
       </div>
 
       {error && (
