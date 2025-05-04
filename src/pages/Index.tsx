@@ -2,6 +2,8 @@
 import PhoneInterface from '@/components/Phone/PhoneInterface';
 import WallpaperApp from '@/components/Apps/WallpaperApp';
 import SnakeGame from '@/components/Apps/SnakeGame';
+import YoutubeApp from '@/components/Apps/YoutubeApp';
+import GoogleApp from '@/components/Apps/GoogleApp';
 
 const defaultWallpaper = "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=800&auto=format&fit=crop";
 
@@ -22,29 +24,22 @@ const apps = [
     id: 'youtube',
     name: 'YouTube',
     icon: 'Youtube',
-    component: () => (
-      <div className="h-full flex items-center justify-center">
-        YouTube будет доступно в следующем обновлении
-      </div>
-    )
+    component: YoutubeApp
   },
   {
     id: 'google',
     name: 'Google',
     icon: 'Search',
-    component: () => (
-      <div className="h-full flex items-center justify-center">
-        Google будет доступно в следующем обновлении
-      </div>
-    )
+    component: GoogleApp
   },
   {
     id: 'settings',
     name: 'Настройки',
     icon: 'Settings',
     component: () => (
-      <div className="h-full flex items-center justify-center">
-        Настройки будут доступны в следующем обновлении
+      <div className="h-full flex flex-col items-center justify-center">
+        <Icon name="Settings" size={48} className="mb-4 text-gray-400" />
+        <p className="text-gray-500">Настройки будут доступны в следующем обновлении</p>
       </div>
     )
   },
@@ -53,8 +48,9 @@ const apps = [
     name: 'Тетрис',
     icon: 'Boxes',
     component: () => (
-      <div className="h-full flex items-center justify-center">
-        Тетрис будет доступен в следующем обновлении
+      <div className="h-full flex flex-col items-center justify-center">
+        <Icon name="Boxes" size={48} className="mb-4 text-gray-400" />
+        <p className="text-gray-500">Тетрис будет доступен в следующем обновлении</p>
       </div>
     )
   },
@@ -63,8 +59,9 @@ const apps = [
     name: 'Калькулятор',
     icon: 'Calculator',
     component: () => (
-      <div className="h-full flex items-center justify-center">
-        Калькулятор будет доступен в следующем обновлении
+      <div className="h-full flex flex-col items-center justify-center">
+        <Icon name="Calculator" size={48} className="mb-4 text-gray-400" />
+        <p className="text-gray-500">Калькулятор будет доступен в следующем обновлении</p>
       </div>
     )
   },
@@ -73,12 +70,15 @@ const apps = [
     name: 'Погода',
     icon: 'Cloud',
     component: () => (
-      <div className="h-full flex items-center justify-center">
-        Погода будет доступна в следующем обновлении
+      <div className="h-full flex flex-col items-center justify-center">
+        <Icon name="Cloud" size={48} className="mb-4 text-gray-400" />
+        <p className="text-gray-500">Погода будет доступна в следующем обновлении</p>
       </div>
     )
   }
 ];
+
+import Icon from '@/components/ui/icon';
 
 const Index = () => {
   return (
