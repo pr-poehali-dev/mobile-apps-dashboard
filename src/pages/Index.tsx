@@ -4,6 +4,11 @@ import WallpaperApp from '@/components/Apps/WallpaperApp';
 import SnakeGame from '@/components/Apps/SnakeGame';
 import YoutubeApp from '@/components/Apps/YoutubeApp';
 import GoogleApp from '@/components/Apps/GoogleApp';
+import WeatherApp from '@/components/Apps/WeatherApp';
+import CalculatorApp from '@/components/Apps/CalculatorApp';
+import TetrisGame from '@/components/Apps/TetrisGame';
+import SettingsApp from '@/components/Apps/SettingsApp';
+import Icon from '@/components/ui/icon';
 
 const defaultWallpaper = "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=800&auto=format&fit=crop";
 
@@ -33,52 +38,30 @@ const apps = [
     component: GoogleApp
   },
   {
-    id: 'settings',
-    name: 'Настройки',
-    icon: 'Settings',
-    component: () => (
-      <div className="h-full flex flex-col items-center justify-center">
-        <Icon name="Settings" size={48} className="mb-4 text-gray-400" />
-        <p className="text-gray-500">Настройки будут доступны в следующем обновлении</p>
-      </div>
-    )
-  },
-  {
-    id: 'tetris',
-    name: 'Тетрис',
-    icon: 'Boxes',
-    component: () => (
-      <div className="h-full flex flex-col items-center justify-center">
-        <Icon name="Boxes" size={48} className="mb-4 text-gray-400" />
-        <p className="text-gray-500">Тетрис будет доступен в следующем обновлении</p>
-      </div>
-    )
+    id: 'weather',
+    name: 'Погода',
+    icon: 'Cloud',
+    component: WeatherApp
   },
   {
     id: 'calculator',
     name: 'Калькулятор',
     icon: 'Calculator',
-    component: () => (
-      <div className="h-full flex flex-col items-center justify-center">
-        <Icon name="Calculator" size={48} className="mb-4 text-gray-400" />
-        <p className="text-gray-500">Калькулятор будет доступен в следующем обновлении</p>
-      </div>
-    )
+    component: CalculatorApp
   },
   {
-    id: 'weather',
-    name: 'Погода',
-    icon: 'Cloud',
-    component: () => (
-      <div className="h-full flex flex-col items-center justify-center">
-        <Icon name="Cloud" size={48} className="mb-4 text-gray-400" />
-        <p className="text-gray-500">Погода будет доступна в следующем обновлении</p>
-      </div>
-    )
+    id: 'tetris',
+    name: 'Тетрис',
+    icon: 'Boxes',
+    component: TetrisGame
+  },
+  {
+    id: 'settings',
+    name: 'Настройки',
+    icon: 'Settings',
+    component: SettingsApp
   }
 ];
-
-import Icon from '@/components/ui/icon';
 
 const Index = () => {
   return (
